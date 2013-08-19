@@ -1,0 +1,4 @@
+#{decorate path=main.gtmpl/}
+#{title value=Index/}
+
+Hello World

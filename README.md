@@ -1,4 +1,4 @@
 my-juzu-tests
 =============
 
-A test project for Juzu Framework
+* Juzu version : 0.7.0-beta15

@@ -1,0 +1,12 @@
+<div class="page">
+  <div class="header">
+    <h1>Juzu Testing application</h1>
+  </div>
+  <div class="content">
+    #{insert/}
+  </div>
+  <br />
+  <div class="footer">
+    <h6> Created with <a href="http://www.github.com/juzu">juzu</a> and used for Juzu framework testing</a> </h6>
+  </div>
+</div>
