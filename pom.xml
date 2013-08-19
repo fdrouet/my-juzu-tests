@@ -21,6 +21,11 @@
     <webjars.version>0.5</webjars.version>
 
     <!-- ************** -->
+    <!-- Maven Plugins versions -->
+    <!-- ************** -->
+    <version.tomcat7.plugin>2.1</version.tomcat7.plugin>
+
+    <!-- ************** -->
     <!-- Build settings -->
     <!-- ************** -->
     <!-- Cross plugins settings -->
@@ -289,6 +294,10 @@
           <artifactId>commons-logging</artifactId>
           <groupId>commons-logging</groupId>
         </exclusion>
+        <exclusion>
+          <groupId>org.slf4j</groupId>
+          <artifactId>slf4j-simple</artifactId>
+        </exclusion>
 
         <!-- remove unneeded IOC containers -->
         <exclusion>
@@ -379,7 +388,23 @@
   </dependencies>
 
   <build>
+    <pluginManagement>
+      <plugins>
+        <plugin>
+          <groupId>org.apache.tomcat.maven</groupId>
+          <artifactId>tomcat7-maven-plugin</artifactId>
+          <version>${version.tomcat7.plugin}</version>
+        </plugin>
+      </plugins>
+    </pluginManagement>
     <plugins>
+      <plugin>
+        <groupId>org.apache.tomcat.maven</groupId>
+        <artifactId>tomcat7-maven-plugin</artifactId>
+        <configuration>
+          <path>/</path>
+        </configuration>
+      </plugin>
     </plugins>
   </build>
 </project>
