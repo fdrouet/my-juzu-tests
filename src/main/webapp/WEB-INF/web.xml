@@ -4,27 +4,7 @@
 
   <context-param>
     <param-name>juzu.run_mode</param-name>
-    <param-value>dev</param-value>
+    <param-value>live</param-value>
   </context-param>
-  <context-param>
-    <param-name>juzu.inject</param-name>
-    <param-value>spring</param-value>
-  </context-param>
-
-  <!-- Juzu Servlet -->
-  <servlet>
-    <servlet-name>JuzuServlet</servlet-name>
-    <servlet-class>juzu.bridge.servlet.JuzuServlet</servlet-class>
-    <init-param>
-      <param-name>juzu.app_name</param-name>
-      <param-value>org.juzu.mytests</param-value>
-    </init-param>
-  </servlet>
-  <servlet-mapping>
-    <servlet-name>JuzuServlet</servlet-name>
-    <url-pattern>/</url-pattern>
-  </servlet-mapping>
-
-  <!-- Juzu Asset Servlet : not required because we use servlet 3 -->
 
 </web-app>

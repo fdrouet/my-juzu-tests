@@ -356,6 +356,19 @@
           <groupId>org.apache.tomcat.maven</groupId>
           <artifactId>tomcat7-maven-plugin</artifactId>
           <version>${version.tomcat7.plugin}</version>
+          <executions>
+            <execution>
+              <id>default-cli</id>
+              <goals>
+                <goal>run</goal>
+              </goals>
+              <configuration>
+                <path>/</path>
+                <!-- Use a separation classloader to avoid conflicts with SLF4J -->
+                <useSeparateTomcatClassLoader>true</useSeparateTomcatClassLoader>
+              </configuration>
+            </execution>
+          </executions>
         </plugin>
       </plugins>
     </pluginManagement>

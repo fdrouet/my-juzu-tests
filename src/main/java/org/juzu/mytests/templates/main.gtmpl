@@ -40,7 +40,7 @@
 
 <div id="footer">
   <div class="container">
-    <p class="muted credit">Created with <a href="http://www.github.com/juzu">juzu</a> and used for my personnal Juzu framework testing</a></p>
+    <p class="muted credit">Created with <a href="http://www.github.com/juzu">juzu</a> and used for my personnal Juzu framework testing (live mode : on)</p>
   </div>
 </div>
 </body>
