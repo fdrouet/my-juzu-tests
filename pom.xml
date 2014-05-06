@@ -14,7 +14,7 @@
     <javax.inject.version>1</javax.inject.version>
     <javax.servlet.version>3.0.1</javax.servlet.version>
     <jquery.version>1.10.2</jquery.version>
-    <juzu.version>0.7.0-beta15</juzu.version>
+    <juzu.version>1.0.0-beta2</juzu.version>
     <logback.version>1.0.9</logback.version>
     <slf4j.version>1.7.2</slf4j.version>
     <spring.version>3.1.4.RELEASE</spring.version>
@@ -97,12 +97,12 @@
       <!-- **************************************** -->
       <dependency>
         <groupId>org.juzu</groupId>
-        <artifactId>juzu-bom-core</artifactId>
+        <artifactId>juzu-core</artifactId>
         <version>${juzu.version}</version>
       </dependency>
       <dependency>
         <groupId>org.juzu</groupId>
-        <artifactId>juzu-core</artifactId>
+        <artifactId>juzu-plugins-jackson</artifactId>
         <version>${juzu.version}</version>
       </dependency>
       <dependency>
@@ -128,16 +128,6 @@
       <dependency>
         <groupId>org.juzu</groupId>
         <artifactId>juzu-plugins-webjars</artifactId>
-        <version>${juzu.version}</version>
-      </dependency>
-      <dependency>
-        <groupId>org.juzu</groupId>
-        <artifactId>juzu-bom-arquillian</artifactId>
-        <version>${juzu.version}</version>
-      </dependency>
-      <dependency>
-        <groupId>org.juzu</groupId>
-        <artifactId>juzu-bom-arquillian-tomcat7</artifactId>
         <version>${juzu.version}</version>
       </dependency>
 
@@ -287,39 +277,11 @@
     <!-- **************************************** -->
     <dependency>
       <groupId>org.juzu</groupId>
-      <artifactId>juzu-bom-core</artifactId>
-      <exclusions>
-        <!-- remove bad logging framework -->
-        <exclusion>
-          <artifactId>commons-logging</artifactId>
-          <groupId>commons-logging</groupId>
-        </exclusion>
-        <exclusion>
-          <groupId>org.slf4j</groupId>
-          <artifactId>slf4j-simple</artifactId>
-        </exclusion>
-
-        <!-- remove unneeded IOC containers -->
-        <exclusion>
-          <groupId>com.google.inject</groupId>
-          <artifactId>guice</artifactId>
-        </exclusion>
-        <exclusion>
-          <groupId>org.jboss.weld</groupId>
-          <artifactId>weld-core</artifactId>
-        </exclusion>
-
-        <!-- remove portlets we are in servlet mode -->
-        <exclusion>
-          <groupId>javax.portlet</groupId>
-          <artifactId>portlet-api</artifactId>
-        </exclusion>
-
-      </exclusions>
+      <artifactId>juzu-core</artifactId>
     </dependency>
     <dependency>
       <groupId>org.juzu</groupId>
-      <artifactId>juzu-core</artifactId>
+      <artifactId>juzu-plugins-jackson</artifactId>
     </dependency>
     <dependency>
       <groupId>org.juzu</groupId>

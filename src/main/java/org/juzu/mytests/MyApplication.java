@@ -2,6 +2,7 @@ package org.juzu.mytests;
 
 import javax.inject.Inject;
 import juzu.Path;
+import juzu.Response;
 import juzu.Route;
 import juzu.View;
 import juzu.template.Template;
@@ -17,7 +18,7 @@ public class MyApplication {
 
   @View
   @Route("/")
-  public void index() {
-    index.render();
+  public Response index() {
+    return index.ok();
   }
 }
