@@ -7,7 +7,7 @@ The purpose of this project is to have a sandbox for Juzu testing and to be able
 
 # How-to use
 
-* checkout the sources :`git clone git@github.com:fdrouet/my-juzu-tests.git`
+* checkout the sources :`git clone -b bug/duplicated-asset-id git@github.com:fdrouet/my-juzu-tests.git`
 * go to project folder : `cd my-juzu-tests`
 * compile and run the application in tomcat : `mvn clean tomcat:run-war`
 * go to home page : http://localhost:8080
