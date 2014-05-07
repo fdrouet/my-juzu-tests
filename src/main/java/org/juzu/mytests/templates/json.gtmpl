@@ -1,0 +1,50 @@
+#{decorate path=main.gtmpl/}
+#{title value=Index/}
+
+<script type="application/javascript">
+    function sendData(data) {
+        $('#json-result-panel .panel-title').text('Response: ');
+        $('#json-result-panel').removeClass('panel-success,panel-danger').addClass('panel-default');
+        $('#json-result').text('');
+        $.ajax({
+            url: '@{MyRestApplication.saveApp()}',
+            data: data,
+            contentType: 'application/json',
+            dataType: 'json',
+            type: 'POST',
+            async: false,
+            success: function (data) {
+                console.log("SUCCESS")
+                $('#json-result-panel .panel-title').text('Response: ');
+                $('#json-result-panel').removeClass('panel-default,panel-danger').addClass('panel-success');
+                $('#json-result').text(JSON.stringify(data, null, '\t'));
+            },
+            error: function (jqXHR, textStatus, errorThrown) {
+                console.log("ERROR: "+textStatus)
+                $('#json-result-panel .panel-title').text('Response: '+textStatus);
+                $('#json-result-panel').removeClass('panel-default,panel-success').addClass('panel-danger');
+                $('#json-result').text(errorThrown);
+            }
+        });
+    }
+</script>
+
+    <textarea id="json-data" class="form-control" rows="7">
+{
+    "name":"GateIn",
+    "description":"The Opensource Website Framework, gives you more than a web framework by letting you use your preferred one."
+}
+    </textarea>
+    <br/>
+    <button type="submit" onclick="sendData($('#json-data').val())">save software</button> (to @{MyRestApplication.saveApp()})
+<br/>
+<br/>
+
+<div id="json-result-panel" class="panel panel-default span12">
+    <div class="panel-heading">
+        <h3 class="panel-title">Response:</h3>
+    </div>
+    <div class="panel-body">
+        <pre id="json-result"></pre>
+    </div>
+</div>

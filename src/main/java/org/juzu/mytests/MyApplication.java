@@ -1,6 +1,7 @@
 package org.juzu.mytests;
 
 import javax.inject.Inject;
+
 import juzu.Path;
 import juzu.Response;
 import juzu.Route;
@@ -16,9 +17,19 @@ public class MyApplication {
   @Path("index.gtmpl")
   Template index;
 
+  @Inject
+  @Path("json.gtmpl")
+  Template json;
+
   @View
   @Route("/")
   public Response index() {
     return index.ok();
+  }
+
+  @View
+  @Route("/json")
+  public Response json_form() {
+    return json.ok();
   }
 }

@@ -2,7 +2,7 @@
 @Servlet("/")
 @Scripts({
     @Script( value = "my.js"),
-    @Script( id="angular.js", value= "//ajax.googleapis.com/ajax/libs/angularjs/1.1.5/angular.min.js", location = AssetLocation.URL),
+    @Script( id="jquery.js", value= "//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js", location = AssetLocation.URL),
     @Script( id="bootstrap.js", value = "//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js", location = AssetLocation.URL)
 })
 @Stylesheets({
