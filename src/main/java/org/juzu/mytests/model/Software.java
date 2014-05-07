@@ -1,5 +1,8 @@
 package org.juzu.mytests.model;
 
+import juzu.Mapped;
+
+@Mapped
 public class Software {
   private String id;
   private String name;
